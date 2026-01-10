@@ -1,0 +1,23 @@
+{
+  "name": "vue3ts",
+  "version": "1.0.0",
+  "description": "vue3源码解析与TS运用教学",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rod-X/vue3Ts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rod-X/vue3Ts/issues"
+  },
+  "homepage": "https://github.com/Rod-X/vue3Ts#readme",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

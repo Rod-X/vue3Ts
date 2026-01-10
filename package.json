@@ -4,7 +4,11 @@
   "description": "vue3源码解析与TS运用教学",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run:function": "tsc src/function-demo.ts --outDir dist && node dist/function-demo.js",
+    "run:basic": "tsc src/basic-types.ts --outDir dist && node dist/basic-types.js",
+    "run:interface": "tsc src/interface-demo.ts --outDir dist && node dist/interface-demo.js",
+    "run:class": "tsc src/class-demo.ts --outDir dist && node dist/class-demo.js"
   },
   "repository": {
     "type": "git",

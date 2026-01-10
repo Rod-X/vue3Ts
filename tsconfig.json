@@ -1,44 +1,67 @@
 {
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
-    // File Layout
-    // "rootDir": "./src",
-    // "outDir": "./dist",
+    // 指定输入文件的根目录
+    "rootDir": "./src",
+    // 指定输出目录
+    "outDir": "./dist",
 
-    // Environment Settings
-    // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
-    "target": "esnext",
-    "types": [],
-    // For nodejs:
-    // "lib": ["esnext"],
-    // "types": ["node"],
-    // and npm install -D @types/node
-
-    // Other Outputs
+    // 指定 ECMAScript 目标版本
+    "target": "esnext", // 支持最新 ECMAScript 特性
+    // 指定模块化方案
+    "module": "nodenext", // Node.js 下推荐
+    // 允许 JS 文件编译
+    "allowJs": false, // 是否允许编译 JS 文件
+    // 生成 sourcemap 文件，便于调试
     "sourceMap": true,
+    // 生成 .d.ts 类型声明文件
     "declaration": true,
+    // 生成 .d.ts.map 文件
     "declarationMap": true,
+    // 允许增量编译，提升编译速度
+    "incremental": true,
+    // 指定要包含的库文件
+    "lib": ["esnext", "dom"], // 可根据需要调整
+    // 指定类型声明文件的查找目录
+    "typeRoots": ["./node_modules/@types"],
+    // 额外包含的类型包
+    "types": [],
 
-    // Stricter Typechecking Options
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
+    // 严格类型检查选项
+    "strict": true, // 启用所有严格类型检查
+    "noImplicitAny": true, // 不允许隐式 any
+    "strictNullChecks": true, // 严格的 null 检查
+    "strictFunctionTypes": true, // 严格函数参数双向协变检查
+    "strictBindCallApply": true, // 严格 bind/call/apply 检查
+    "strictPropertyInitialization": true, // 类属性必须初始化
+    "noImplicitThis": true, // 不允许隐式 this
+    "alwaysStrict": true, // 始终以严格模式解析代码
+    "noUncheckedIndexedAccess": true, // 索引签名类型更严格
+    "exactOptionalPropertyTypes": true, // 可选属性更严格
 
-    // Style Options
-    // "noImplicitReturns": true,
-    // "noImplicitOverride": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "noFallthroughCasesInSwitch": true,
-    // "noPropertyAccessFromIndexSignature": true,
+    // 代码风格相关
+    "noImplicitReturns": true, // 函数必须有返回值
+    "noFallthroughCasesInSwitch": true, // switch 必须有 break
+    "noUnusedLocals": true, // 不允许未使用的局部变量
+    "noUnusedParameters": true, // 不允许未使用的参数
+    "noImplicitOverride": true, // 子类重写必须显式 override
+    "noPropertyAccessFromIndexSignature": true, // 不允许通过索引签名访问属性
 
-    // Recommended Options
-    "strict": true,
-    "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
-    "isolatedModules": true,
-    "noUncheckedSideEffectImports": true,
-    "moduleDetection": "force",
-    "skipLibCheck": true,
+    // 模块解析相关
+    "moduleResolution": "node", // Node 风格模块解析
+    "esModuleInterop": true, // 允许默认导入非 esModule 模块
+    "allowSyntheticDefaultImports": true, // 允许合成默认导入
+    "resolveJsonModule": true, // 允许导入 json 文件
+    "verbatimModuleSyntax": true, // 保留导入语法
+    "isolatedModules": true, // 每个文件单独作为模块
+    "moduleDetection": "force", // 强制模块检测
+    "noUncheckedSideEffectImports": true, // 检查副作用导入
+
+    // JSX 相关
+    "jsx": "react-jsx", // 支持 React 17+ 新 JSX 转换
+
+    // 其他
+    "skipLibCheck": true, // 跳过库文件类型检查，提升速度
+    "forceConsistentCasingInFileNames": true // 文件名大小写一致
   }
 }

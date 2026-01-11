@@ -34,7 +34,8 @@ function format(input: number | string): string {
   }
   return `字符串：${input}`;
 }
-
+console.log(format(123));
+console.log(format("abc"));
 // 7. this 类型与箭头函数
 const counter = {
   count: 0,

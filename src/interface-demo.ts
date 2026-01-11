@@ -64,7 +64,24 @@ c1();
 c1();
 console.log('Counter:', c1.count);
 
+
 // 7. 接口与类实现
+/**
+ * implements 关键字说明：
+ * 1. 用于类实现接口，强制类必须实现接口声明的所有属性和方法。
+ * 2. 一个类可以实现多个接口，用逗号分隔：class A implements B, C {}
+ * 3. 实现接口时，接口只定义结构，具体实现由类完成。
+ * 4. implements 只检查类型，不影响运行时行为。
+ * 5. 常用于规范类的行为、解耦、面向接口编程。
+ *
+ * 示例：
+ * interface Flyable { fly(): void }
+ * interface Swimmable { swim(): void }
+ * class Duck implements Flyable, Swimmable {
+ *   fly() { console.log('飞'); }
+ *   swim() { console.log('游'); }
+ * }
+ */
 interface Logger {
   log(msg: string): void;
 }
